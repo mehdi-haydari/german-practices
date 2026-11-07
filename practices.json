@@ -1,0 +1,116 @@
+[
+  {
+    "id": "lesson-09-opening", "ref": "Opening", "group": "Opening", "date": "2026-10-31",
+    "title": "Staying in touch", "question": "Wie bleibst du mit deinen Freunden oder deiner Familie in Kontakt? Wie oft?",
+    "translation": "How do you stay in touch with friends or family? How often?", "page": 69,
+    "original": "Ich bleibe mit meine Familie auf dem telefone in kontakt",
+    "corrected": "Ich bleibe mit meiner Familie per Telefon in Kontakt.",
+    "meaning": "I stay in touch with my family by phone.",
+    "tags": ["Dative", "Communication", "Capitalization"], "status": "reviewed",
+    "strengths": ["The meaning is clear. The learner uses ich bleibe correctly and places the conjugated verb second."],
+    "analysis": ["Mit takes the dative: meine Familie becomes mit meiner Familie.", "Per Telefon expresses the means of communication here.", "Telefon and Kontakt are nouns and start with capitals. Frequency was not yet specified."],
+    "note": "The frequency follow-up is still unanswered. This first sentence provides a small writing sample, not an overall level assessment.", "attempts": []
+  },
+  {
+    "id": "lesson-09-c2a-a1", "ref": "C2.a · A.1", "group": "A", "date": "2026-11-07",
+    "title": "Receiving invitations", "question": "Bekommst du oft Einladungen?", "translation": "Do you often receive invitations?", "page": 75,
+    "original": null, "corrected": "Ja, ich bekomme oft Einladungen, zum Beispiel zu Geburtstagsfeiern.",
+    "meaning": "Yes, I often receive invitations, for example to birthday parties.",
+    "tags": ["Invitations", "Frequency"], "status": "model",
+    "strengths": [], "analysis": ["Bekommen means to receive. Die Einladung is singular; die Einladungen is plural.", "This is a personal question: the answer should reflect the learner's own experience."],
+    "note": "Teacher example only. The learner requested a model and has not submitted an independent answer to A.1.",
+    "alternatives": [{"text": "Nein, ich bekomme nur selten Einladungen.", "label": "If invitations are rare"}], "attempts": []
+  },
+  {
+    "id": "lesson-09-c2a-a2", "ref": "C2.a · A.2", "group": "A", "date": "2026-11-07",
+    "title": "Who invites me?", "question": "Wer lädt dich ein?", "translation": "Who invites you?", "page": 75,
+    "original": "meine frunden oft lädt mir ein", "corrected": "Meine Freunde laden mich oft ein.",
+    "meaning": "My friends often invite me.", "tags": ["Verb agreement", "Accusative", "Separable verbs"], "status": "guided",
+    "strengths": ["The learner expresses the intended meaning and puts the separated prefix ein at the end."],
+    "analysis": ["Meine Freunde is plural, so use laden. Singular er/sie/es uses lädt.", "Einladen takes an accusative object: mich means me here.", "Put the conjugated verb second: Meine Freunde | laden | mich oft | ein.", "Freunde is the correct spelling and begins with a capital. In the nominative, use meine before plural Freunde."],
+    "note": "The later correct short answers followed explanations and models. They show immediate guided success; retention has not been checked.",
+    "attempts": [
+      {"kind": "Guided check", "prompt": "___ Bruder / ___ Eltern", "answer": "mein-meine", "result": "correct", "feedback": "Both choices are correct: mein Bruder (masculine singular) and meine Eltern (plural)."},
+      {"kind": "Guided check", "prompt": "Meine Schwester ___ mich oft ___. (einladen)", "answer": "laden-ein", "result": "practice", "corrected": "Meine Schwester lädt mich oft ein.", "feedback": "Ein is in the right place. Meine Schwester is singular and needs lädt."},
+      {"kind": "Guided retry", "prompt": "Mein Bruder ___ mich oft ein.", "answer": "lädt", "result": "correct", "feedback": "Correct singular form after the explicit model."}
+    ]
+  },
+  {
+    "id": "lesson-09-c2a-a3", "ref": "C2.a · A.3", "group": "A", "date": "2026-11-07",
+    "title": "An invitation from the boss", "question": "Hat dein Chef dich einmal eingeladen?", "translation": "Has your boss ever invited you?", "page": 75,
+    "original": "Nein, mein Chef hat nie mich eingladen.", "corrected": "Nein, mein Chef hat mich noch nie eingeladen.",
+    "meaning": "No, my boss has never invited me before.", "tags": ["Perfekt", "Pronoun position", "Participle"], "status": "reviewed",
+    "strengths": ["Mein Chef and the auxiliary hat are correctly formed. The learner puts the attempted participle at the end."],
+    "analysis": ["The neutral order here is hat mich nie, with mich before nie.", "The participle is eingeladen: ein + ge + laden.", "Noch nie means never before and fits a question about experience. Nie by itself is also grammatically possible."],
+    "alternatives": [{"text": "Nein, mein Chef hat mich nie eingeladen.", "label": "Also correct"}], "attempts": []
+  },
+  {
+    "id": "lesson-09-c2a-a4", "ref": "C2.a · A.4", "group": "A", "date": "2026-11-07",
+    "title": "Bringing something along", "question": "Was bringst du mit?", "translation": "What do you bring along?", "page": 75,
+    "original": "Sie hat mich noch nie engeladen, deshalb ich bringe kein thug mit mich",
+    "corrected": "Sie hat mich noch nie eingeladen, deshalb bringe ich nichts mit.",
+    "meaning": "She has never invited me, so I don't bring anything.", "tags": ["Deshalb", "Word order", "Separable verbs"], "status": "guided",
+    "strengths": ["The learner correctly reuses hat mich noch nie from the preceding feedback and chooses the first-person form bringe."],
+    "analysis": ["After deshalb, the conjugated verb comes immediately next: deshalb bringe ich.", "Use nichts for nothing. Mitbringen has the separated prefix mit at the end; the extra mit mich is unnecessary here.", "The participle is eingeladen, with the prefix ein-.", "The correction retains Sie, the learner's feminine pronoun. If referring to the previously mentioned masculine Chef, use Er."],
+    "note": "The teacher interpreted kein thug as an attempt to say nothing. The original wording is preserved above.",
+    "attempts": [{"kind": "Guided check", "prompt": "Ich bin müde, deshalb ___ ___ zu Hause. (ich / bleiben)", "answer": "bleibeßich", "result": "correct", "corrected": "Ich bin müde, deshalb bleibe ich zu Hause.", "feedback": "The intended order bleibe ich is correct. Write the words with a space; the inserted ß appears to be a typing error."}]
+  },
+  {
+    "id": "lesson-09-c2a-a5", "ref": "C2.a · A.5", "group": "A", "date": "2026-11-07",
+    "title": "Being on time", "question": "Kommst du immer pünktlich?", "translation": "Are you always on time?", "page": 75,
+    "original": "Nein, ich Immer komme spät", "corrected": "Nein, ich komme immer zu spät.",
+    "meaning": "No, I always arrive late.", "tags": ["Word order", "Frequency", "Punctuality"], "status": "guided",
+    "strengths": ["The first-person form komme is correct, and the negative response is understandable."],
+    "analysis": ["Put the verb second: ich komme immer. Immer stays lowercase within the sentence.", "Zu spät means late for an expected time.", "Immer zu spät means always late. Nicht immer pünktlich means not always on time; this alternative changes the frequency."],
+    "attempts": [{"kind": "Sentence-order retry", "prompt": "Put in order: ich / oft / komme / zu spät", "answer": "ich komme oft zu spät", "result": "correct", "corrected": "Ich komme oft zu spät.", "feedback": "Correct word order, verb form, and zu spät. Capitalize Ich at the start. This guided retry uses oft rather than immer."}]
+  },
+  {
+    "id": "lesson-09-c2a-b1", "ref": "C2.a · B.1", "group": "B", "date": "2026-11-07",
+    "title": "Inviting several guests", "question": "Hast du schon einmal viele Gäste (drei oder mehr) eingeladen?", "translation": "Have you ever invited three or more guests?", "page": 75,
+    "original": "Nein, ich habe nicht oft viele Gäste engeladen", "corrected": "Ja, aber ich habe nicht oft viele Gäste eingeladen.",
+    "meaning": "Yes, but I haven't often invited many guests.", "tags": ["Perfekt", "Experience vs frequency", "Participle"], "status": "reviewed",
+    "strengths": ["Ich habe and the sentence-final participle position are correct. Nicht oft is correctly placed for the intended frequency."],
+    "analysis": ["The participle is eingeladen.", "Schon einmal asks whether something has happened at least once. Ja answers that question; aber ... nicht oft adds low frequency.", "Noch nie would mean never before. That is a different meaning from the learner's clarification."],
+    "clarifications": [{"answer": "nicht oft", "explanation": "The learner chose not often when asked to clarify never versus infrequent invitations. The correction preserves this meaning."}], "attempts": []
+  },
+  {
+    "id": "lesson-09-c2a-b2", "ref": "C2.a · B.2", "group": "B", "date": "2026-11-07",
+    "title": "Some on time, others late", "question": "Waren deine Gäste pünktlich?", "translation": "Were your guests on time?", "page": 75,
+    "original": "ja meine Gäste weren pünktlich", "corrected": "Einige Gäste waren pünktlich, andere sind zu spät gekommen.",
+    "meaning": "Some guests were on time; others arrived late.", "tags": ["Past forms", "Einige / andere", "Perfekt"], "status": "guided",
+    "strengths": ["The first answer has the correct plural subject and sentence order. The learner later writes a correct, more detailed sentence."],
+    "analysis": ["Spell the past plural of sein as waren. The basic correction is Ja, meine Gäste waren pünktlich.", "The learner then clarified that some were on time and some late. Einige ... andere ... expresses that distinction.", "Kamen is the Präteritum plural of kommen. Sind ... gekommen is the Perfekt alternative.", "Waren and sind ... gekommen work naturally together in this sentence. Repeating Gäste is also correct."],
+    "clarifications": [{"answer": "but i wana say some were ontime and some late", "explanation": "The detailed correction follows the learner's intended mixed-arrival meaning."}],
+    "attempts": [{"kind": "Learner rewrite after explanation", "prompt": "Express that some guests were on time and others arrived late.", "answer": "Einige Gäste waren pünktlich, andere Gäste sind zu spät gekommen", "result": "correct", "feedback": "Grammatically correct. The second Gäste can be kept or omitted. The rewrite followed an explanation and a supplied Perfekt model."}],
+    "alternatives": [{"text": "Einige Gäste waren pünktlich, andere kamen zu spät.", "label": "Teacher's initial model with kamen"}]
+  },
+  {
+    "id": "lesson-09-c2a-b3", "ref": "C2.a · B.3", "group": "B", "date": "2026-11-07",
+    "title": "Did anyone bring gifts?", "question": "Haben die Gäste Geschenke mitgebracht?", "translation": "Did the guests bring gifts?", "page": 75,
+    "original": "Nein, sie bringen nicht mit", "corrected": "Nein, sie haben keine Geschenke mitgebracht.",
+    "meaning": "No, they didn't bring any gifts.", "tags": ["Perfekt", "Negation", "Participle"], "status": "guided",
+    "strengths": ["Sie bringen is correct in the present tense, and the learner puts the separated prefix mit at the end."],
+    "analysis": ["The question is about the past. Use haben ... mitgebracht.", "Mitbringen is the infinitive; mitgebracht is the participle. Bringen becomes gebracht.", "Keine Geschenke negates the plural noun. It means no gifts, without claiming that the guests brought nothing at all."],
+    "attempts": [{"kind": "Guided Perfekt check", "prompt": "Ja, sie ___ Blumen ___. (mitbringen)", "answer": "haben mitbringen", "result": "practice", "corrected": "Ja, sie haben Blumen mitgebracht.", "feedback": "Haben is correct. The second gap requires the participle mitgebracht. Participle formation still needs practice."}],
+    "note": "The flowers sentence is a hypothetical grammar check, not a fact about the learner's guests."
+  },
+  {
+    "id": "lesson-09-c2a-b4", "ref": "C2.a · B.4", "group": "B", "date": "2026-11-07",
+    "title": "What we did together", "question": "Was habt ihr gemacht?", "translation": "What did you do together?", "page": 75,
+    "original": "Wir haben hausarbeiten gemacht", "corrected": "Wir haben Hausarbeiten gemacht.",
+    "meaning": "We did household chores.", "tags": ["Perfekt", "Vocabulary", "Capitalization"], "status": "reviewed",
+    "strengths": ["Wir haben, the sentence order, and the sentence-final gemacht are correct. Gemacht was also present in the question."],
+    "analysis": ["Hausarbeiten is a noun and begins with a capital. The plural is grammatically valid.", "Hausarbeit is a common collective alternative for household chores. Hausaufgaben means homework, which the learner confirmed was not intended.", "The learner linked the chores to the guests not bringing gifts. The longer teacher example connects both answers with deshalb haben wir."],
+    "clarifications": [{"answer": "householding. they didn't bring any gift, so...", "explanation": "The intended activity is household chores. The original scenario is retained."}],
+    "alternatives": [{"text": "Sie haben keine Geschenke mitgebracht, deshalb haben wir zusammen Hausarbeit gemacht.", "label": "Teacher model connecting B.3 and B.4"}], "attempts": []
+  },
+  {
+    "id": "lesson-09-c2a-b5", "ref": "C2.a · B.5", "group": "B", "date": "2026-11-07",
+    "title": "Helping with preparations", "question": "Hat jemand bei der Vorbereitung geholfen?", "translation": "Did anyone help with the preparations?", "page": 75,
+    "original": "Ja, ich habe der VorBereitung geholfen", "corrected": "Ja, ich habe bei der Vorbereitung geholfen.",
+    "meaning": "Yes, I helped with the preparations.", "tags": ["Prepositions", "Perfekt", "Capitalization"], "status": "reviewed",
+    "strengths": ["The learner uses habe and sentence-final geholfen correctly. Geholfen was supplied in the question."],
+    "analysis": ["Bei der Vorbereitung expresses the activity the learner helped with.", "Jemandem helfen means helping a person; bei ... helfen expresses helping with an activity.", "Write Vorbereitung with only the first letter capitalized. The corrected sentence preserves the learner's subject ich."],
+    "note": "Both question sets in C2.a have been covered: A.1 as a teacher example, A.2–A.5 and B.1–B.5 as learner responses. The next reporting exercise in C2.b has not been answered.", "attempts": []
+  }
+]
