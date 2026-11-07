@@ -6,6 +6,8 @@ The journal follows this navigation: **lesson index → lesson page → grouped 
 
 ## GitHub Pages
 
+Journal: https://mehdi-haydari.github.io/german-practices/
+
 The workflow in `.github/workflows/pages.yml` builds the site with `SITE_BASE_PATH=/german-practices` and deploys the generated `dist/` directory after pushes to `main`. Repository Settings → Pages must use **GitHub Actions** as the publishing source.
 
 ## Update the journal
