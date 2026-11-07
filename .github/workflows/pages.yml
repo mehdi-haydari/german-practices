@@ -36,6 +36,8 @@ jobs:
 
       - name: Check generated pages and links
         run: python check.py
+        env:
+          SITE_BASE_PATH: /german-practices
 
       - name: Check JavaScript syntax
         run: node --check app.js
