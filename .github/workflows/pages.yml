@@ -29,15 +29,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build for the repository Pages path
+      - name: Build for the custom domain root
         run: python build.py
-        env:
-          SITE_BASE_PATH: /german-practices
 
       - name: Check generated pages and links
         run: python check.py
-        env:
-          SITE_BASE_PATH: /german-practices
 
       - name: Check JavaScript syntax
         run: node --check app.js

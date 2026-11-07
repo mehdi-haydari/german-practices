@@ -100,6 +100,7 @@ for p in DATA:
 
 for file in ['styles.css','app.js']:
     (DIST/file).write_text((ROOT/file).read_text(),encoding='utf-8')
+(DIST/'CNAME').write_text('german-practices.mehdiheydari.dev\n',encoding='utf-8')
 (DIST/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#285b49"/><text x="14" y="45" font-family="Georgia,serif" font-size="40" fill="#fffefa">A₂</text></svg>')
 (DIST/'404.html').write_text(shell('Practice not found',f'<main id="main" class="wrap" style="padding-top:70px;padding-bottom:100px"><div class="eyebrow">This page is not in the notebook</div><h1>Let’s find your practice.</h1><p>The lesson index has all lessons we have practised.</p><a class="button primary" href="{path('/')}">Go to the lesson index</a></main>','Find your German lesson in the journal index.'),encoding='utf-8')
 (DIST/'.nojekyll').write_text('',encoding='utf-8')

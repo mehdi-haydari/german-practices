@@ -6,16 +6,16 @@ The journal follows this navigation: **lesson index → lesson page → grouped 
 
 ## GitHub Pages
 
-Journal: https://mehdi-haydari.github.io/german-practices/
+Journal: https://german-practices.mehdiheydari.dev/
 
-The workflow in `.github/workflows/pages.yml` builds the site with `SITE_BASE_PATH=/german-practices` and deploys the generated `dist/` directory after pushes to `main`. Repository Settings → Pages must use **GitHub Actions** as the publishing source.
+The workflow in `.github/workflows/pages.yml` builds the site at the custom domain root and deploys the generated `dist/` directory after pushes to `main`. The `CNAME` file is copied into the Pages artifact. Repository Settings → Pages uses **GitHub Actions** as the publishing source.
 
 ## Update the journal
 
 1. Add or update the relevant question in `practices.json`, preserving exact submitted wording. Append retries rather than overwriting earlier answers.
 2. Keep record IDs unchanged; they maintain redirects to question anchors on the grouped practice page. Keep lesson and grouped-practice paths stable.
 3. Group new questions under the appropriate book practice in `build.py`.
-4. For a local root-path preview, run `python3 build.py`. To preview GitHub Pages paths, set `SITE_BASE_PATH=/german-practices` first. Run `python3 check.py` and `node --check app.js` after building.
+4. For a local root-path preview, run `python3 build.py`. Run `python3 check.py` and `node --check app.js` after building.
 5. Push changes to `main`; GitHub Actions publishes the updated Pages site.
 
 The generated site is read-only for visitors. Keep clarified meanings, teacher examples, and independent learner submissions distinct, and avoid claims of mastery based only on immediate guided answers.
