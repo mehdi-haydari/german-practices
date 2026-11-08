@@ -112,5 +112,41 @@
     "strengths": ["The learner uses habe and sentence-final geholfen correctly. Geholfen was supplied in the question."],
     "analysis": ["Bei der Vorbereitung expresses the activity the learner helped with.", "Jemandem helfen means helping a person; bei ... helfen expresses helping with an activity.", "Write Vorbereitung with only the first letter capitalized. The corrected sentence preserves the learner's subject ich."],
     "note": "Both question sets in C2.a have been covered: A.1 as a teacher example, A.2–A.5 and B.1–B.5 as learner responses. The next reporting exercise in C2.b has not been answered.", "attempts": []
+  },
+  {
+    "id": "lesson-09-c2c-invitation",
+    "ref": "C2.c · Invitation",
+    "group": "C2.c",
+    "date": "2026-11-08",
+    "title": "Birthday party invitation",
+    "question": "Wählen Sie eine Situation aus und schreiben Sie eine Einladung wie in 1a an die passenden Personen.",
+    "translation": "Choose a situation and write an invitation, as in 1a, to the appropriate people.",
+    "page": 75,
+    "original": "liebe/r ...\nWir haben einen Geburstag party. Deshalb möchten wir du am November 31 um 20 Uhr yu einer Party bei mir yu Hause einladen. Wir hoffen du hast zeit und kannst kommen.\nMit Viele Grüße\nMehdi",
+    "corrected": "Hallo [Name],\nwir feiern meinen Geburtstag. Deshalb möchten wir dich am [gültiges Datum] um 20 Uhr zu einer Party bei mir zu Hause einladen. Wir hoffen, du hast Zeit und kannst kommen.\n\nViele Grüße\nMehdi",
+    "meaning": "Hello [Name], we are celebrating my birthday. So we would like to invite you to a party at my home at 8 p.m. on [valid date]. We hope you have time and can come. Best wishes, Mehdi.",
+    "tags": [
+      "Invitations",
+      "Accusative",
+      "Capitalization",
+      "Dates"
+    ],
+    "status": "reviewed",
+    "strengths": [
+      "The learner independently includes the main invitation parts: the occasion, a time, a place, an invitation, a hope that the guest can come, and a closing.",
+      "The learner attempts the useful invitation pattern möchten ... einladen and includes zu einer Party.",
+      "The meaning of the invitation is clear."
+    ],
+    "analysis": [
+      "A greeting can be Liebe [female name], Lieber [male name], or Hallo [name]. Liebe/r is a planning shorthand, not a finished greeting.",
+      "Geburtstag is a noun. The compound Geburtstagsparty is written as one word; Wir feiern meinen Geburtstag is a natural way to introduce this invitation.",
+      "Einladen takes an accusative person: möchten wir dich ... einladen. Du is the subject in du hast Zeit, but the person being invited is dich.",
+      "November has only 30 days, so November 31 is not a valid date. Write the date as am 30. November, or replace the placeholder with another real date.",
+      "Um 20 Uhr is correct. Zeit is a noun and needs a capital letter.",
+      "Bei mir zu Hause is correct if the party is at the learner's home. Viele Grüße is used without Mit; the alternative is Mit vielen Grüßen.",
+      "Add a comma after hoffen. The pattern Wir hoffen, du hast Zeit und kannst kommen is a natural invitation. The dass version is Wir hoffen, dass du Zeit hast und kommen kannst."
+    ],
+    "note": "This is the learner's first written invitation attempt and has been corrected with the date left as a placeholder because November 31 does not exist. It is a short written sample, not evidence of speaking, listening, or overall proficiency.",
+    "attempts": []
   }
 ]

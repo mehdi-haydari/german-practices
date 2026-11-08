@@ -15,7 +15,7 @@ LESSON={
 def e(value): return escape(str(value),quote=True)
 def path(p): return BASE_PATH + (p if p.startswith('/') else '/' + p)
 def url(p): return path(f'/practice/{p}/')
-def date(p): return '31 October 2026' if p=='2026-10-31' else '7 November 2026'
+def date(p): return {'2026-10-31':'31 October 2026','2026-11-07':'7 November 2026','2026-11-08':'8 November 2026'}.get(p,p)
 def badge(p):
     label={'reviewed':'Reviewed','guided':'Guided practice','model':'Teacher example'}[p['status']]
     return f'<span class="badge {p["status"]}">{label}</span>'
@@ -33,14 +33,16 @@ def shell(title,body,description):
 def practice_records():
     opening=[p for p in DATA if p['group']=='Opening']
     c2=[p for p in DATA if p['group'] in ('A','B')]
+    c2c=[p for p in DATA if p['group']=='C2.c']
     out=[]
     if opening: out.append({'id':'lesson-09-opening','code':'Opening','title':'Staying in touch','description':'A short opening question about keeping in contact.','records':opening,'count':len(opening)})
     if c2: out.append({'id':'lesson-09-c2a','code':'C2.a','title':'Invitations and guests','description':'Fragen A and B: personal answers about invitations, guests, and preparations.','records':c2,'count':len(c2)})
+    if c2c: out.append({'id':'lesson-09-c2c','code':'C2.c','title':'Birthday party invitation','description':'A written invitation draft with corrections and notes.','records':c2c,'count':len(c2c)})
     return out
 PRACTICES=practice_records()
 
 def record_card(x):
-    return f'''<a class="practice-card compact" href="{url(x['id'])}"><div class="card-meta"><span class="ref">Lesson 9 → {e(x['code'])}</span><span>{x['count']} question{'s' if x['count']!=1 else ''}</span></div><h3>{e(x['title'])}</h3><p>{e(x['description'])}</p><div class="card-footer"><span class="badge reviewed">Practice page</span><span class="view">Open all questions <span aria-hidden="true">↗</span></span></div></a>'''
+    return f'''<a class="practice-card compact" href="{url(x['id'])}"><div class="card-meta"><span class="ref">Lesson 9 → {e(x['code'])}</span><span>{x['count']} {'question' if x['count']==1 else 'questions'}</span></div><h3>{e(x['title'])}</h3><p>{e(x['description'])}</p><div class="card-footer"><span class="badge reviewed">Practice page</span><span class="view">Open all questions <span aria-hidden="true">↗</span></span></div></a>'''
 
 lesson_index=f'''<main id="main" class="wrap"><section class="hero index-hero"><div><div class="eyebrow">A2 / A growing notebook</div><h1 id="page-title">My German<br>practice.</h1><p class="intro">A simple record of the lessons we have practised together. Open a lesson to find its practice pages, answers, and feedback.</p><div class="hero-actions"><a class="button primary" href="{path('/lesson/9/')}">Open lesson 9 <span aria-hidden="true">→</span></a></div></div><aside class="lesson-note"><div class="eyebrow">Current book lesson</div><h2 lang="de">Warum rufst du<br>nicht an?</h2><p>MOTIVE A2 · Lesson 9<br>{e(LESSON[9]['summary'])}</p><div class="note-bottom"><span>Written practice</span><span>Growing week by week</span></div></aside></section>
 <section class="lesson-list" aria-labelledby="lessons-title"><div class="section-title"><h2 id="lessons-title">Lessons we’ve practised</h2><span class="result-count">{len(LESSON)} lesson</span></div><div class="card-grid">{''.join(f'''<a class="practice-card lesson-card" href="{path(f'/lesson/{n}/')}"><div class="card-meta"><span class="ref">MOTIVE A2 · Lesson {n}</span><span>Printed pages {e(v['printed'])}</span></div><h3 lang="de">{e(v['title'])}</h3><p>{e(v['summary'])}</p><div class="card-footer"><span class="badge reviewed">{len([x for x in PRACTICES if x['id'].startswith(f'lesson-{n:02d}-')])} practice pages</span><span class="view">Open lesson <span aria-hidden="true">↗</span></span></div></a>''' for n,v in LESSON.items())}</div></section>
@@ -57,12 +59,14 @@ for n,meta in LESSON.items():
     (target/'index.html').write_text(shell(f'Lesson {n}',listing,f'Practice pages for MOTIVE A2 lesson {n}, {meta["title"]}.'),encoding='utf-8')
 
 for practice in PRACTICES:
-    records=practice['records']; is_c2=practice['code']=='C2.a'
+    records=practice['records']
+    if practice['code']=='C2.a': section_specs=[('A','Fragen A'),('B','Fragen B')]
+    elif practice['code']=='C2.c': section_specs=[('C2.c','Invitation draft')]
+    else: section_specs=[('Opening','Opening question')]
     sections=[]
-    for group in (['A','B'] if is_c2 else ['Opening']):
+    for group,section_title in section_specs:
         subset=[p for p in records if p['group']==group]
         if not subset: continue
-        section_title={'A':'Fragen A','B':'Fragen B','Opening':'Opening question'}[group]
         cards=[]
         for p in subset:
             ref=p['ref'].split(' · ')[-1] if ' · ' in p['ref'] else 'opening'
@@ -81,7 +85,7 @@ for practice in PRACTICES:
             attempt_block=f'<details class="attempts" open><summary>Follow-up attempts ({len(attempts)})</summary>{"".join(attempts)}</details>' if attempts else ''
             note=f'<p class="context-note">{e(p["note"])}</p>' if p.get('note') else ''
             cards.append(f'''<article class="question-review" id="{e(anchor)}"><div class="question-title"><span class="ref">{e(p['ref'])}</span>{badge(p)}</div><h3 lang="de">{e(p['question'])}</h3><p class="translation">{e(p['translation'])}</p><div class="answer-pair"><section class="answer-box original">{raw}</section><section class="answer-box corrected"><div class="box-label">{'Teacher example' if p['status']=='model' else 'Corrected answer'}</div><blockquote lang="de">{e(p['corrected'])}</blockquote><p class="meaning">{e(p['meaning'])}</p></section></div>{clarifications}{strengths}<div class="feedback"><h4>Analysis</h4><ol>{analysis}</ol></div>{alternatives}{attempt_block}{note}</article>''')
-        sections.append(f'<section class="question-set" aria-labelledby="set-{group}"><div class="section-title"><h2 id="set-{group}">{section_title}</h2><span class="result-count">{len(subset)} questions</span></div>{"".join(cards)}</section>')
+        sections.append(f'<section class="question-set" aria-labelledby="set-{group}"><div class="section-title"><h2 id="set-{group}">{section_title}</h2><span class="result-count">{len(subset)} {'question' if len(subset)==1 else 'questions'}</span></div>{"".join(cards)}</section>')
     lesson_title=LESSON[9]['title']
     body=f'''<main id="main" class="wrap"><nav class="breadcrumbs"><a href="{path('/')}">Lesson index</a><span aria-hidden="true">/</span><a href="{path('/lesson/9/')}">Lesson 9</a><span aria-hidden="true">/</span><span>{e(practice['code'])}</span></nav>
 <header class="practice-header"><div class="eyebrow">Lesson 9 · {e(practice['code'])}</div><h1>{e(practice['title'])}</h1><p>{e(practice['description'])}</p><div class="hero-actions"><a class="button" href="{path('/lesson/9/')}">← All Lesson 9 practices</a><button class="button" data-copy-link="{url(practice['id'])}" type="button">Copy practice link ↗</button></div></header>

@@ -5,9 +5,9 @@ import os
 from urllib.parse import urlsplit,unquote
 from html import unescape
 ROOT=Path(__file__).resolve().parent;DIST=ROOT/'dist';data=json.loads((ROOT/'practices.json').read_text());BASE_PATH=os.environ.get('SITE_BASE_PATH','').rstrip('/')
-assert len(data)==11
+assert len(data)==12
 assert len({p['id'] for p in data})==len(data)
-assert sum(p['original'] is not None for p in data)==10
+assert sum(p['original'] is not None for p in data)==11
 assert sum(len(p['attempts']) for p in data)==7
 class Page(HTMLParser):
     def __init__(self):super().__init__();self.links=[];self.ids=set();self.lang=False
@@ -30,7 +30,7 @@ for file in DIST.rglob('*.html'):
         if u.fragment:
             q=Page();q.feed(target.read_text());assert u.fragment in q.ids,(target,u.fragment)
 index=(DIST/'index.html').read_text();assert f'{BASE_PATH}/lesson/9/' in index and 'Lessons we’ve practised' in index
-lesson=(DIST/'lesson/9/index.html').read_text();assert f'{BASE_PATH}/practice/lesson-09-c2a/' in lesson and f'{BASE_PATH}/practice/lesson-09-opening/' in lesson
+lesson=(DIST/'lesson/9/index.html').read_text();assert f'{BASE_PATH}/practice/lesson-09-c2a/' in lesson and f'{BASE_PATH}/practice/lesson-09-opening/' in lesson and f'{BASE_PATH}/practice/lesson-09-c2c/' in lesson
 c2=DIST/'practice/lesson-09-c2a/index.html';html=unescape(c2.read_text())
 assert 'Fragen A' in html and 'Fragen B' in html
 for p in data:
@@ -41,4 +41,7 @@ for p in data:
         for a in p['attempts']:assert a['answer'] in html
         legacy=(DIST/'practice'/p['id']/'index.html').read_text();assert f'#{p["ref"].split(" · ")[-1].lower().replace(".","-")}' in legacy
 assert (DIST/'.nojekyll').exists()
-print('Verified lesson → practice navigation, all 10 C2.a questions, original answers, corrections, follow-ups, and legacy question links.')
+c2c=unescape((DIST/'practice/lesson-09-c2c/index.html').read_text())
+invitation=next(p for p in data if p['id']=='lesson-09-c2c-invitation')
+assert invitation['original'] in c2c and invitation['corrected'] in c2c and 'November has only 30 days' in c2c
+print('Verified lesson → practice navigation, C2.a questions, C2.c invitation, original answers, corrections, follow-ups, and legacy question links.')
